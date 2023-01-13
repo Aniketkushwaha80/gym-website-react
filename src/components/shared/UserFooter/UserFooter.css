@@ -1,0 +1,13 @@
+.socialnetwork-logo{
+    display:flex;
+    justify-content: space-evenly;
+    width:25%;
+   font-size: 20px;
+    color:rgb(41,40,45);
+}
+
+@media screen and (max-width: 990px) {
+ .socialnetwork-logo{
+    width: 50%;
+ }
+}

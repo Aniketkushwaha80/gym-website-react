@@ -1,0 +1,300 @@
+// // Modals
+// // Design element Dialogs
+// // --------------------------------------------------
+// .modal-content {
+//   border: 0;
+
+//   // Modal header
+//   // Top section of the modal w/ title and dismiss
+
+//   .modal-header {
+//     border-bottom: none;
+
+//     & button {
+//         position: absolute;
+//         right: 27px;
+//         top: 24px;
+//         outline: 0;
+//         padding: 1rem;
+//         margin: -1rem -1rem -1rem auto;
+//     }
+//     .title{
+//         color: $black;
+//         margin-top: 5px;
+//         margin-bottom: 0;
+//     }
+
+//     .modal-title{
+//       color: $black;
+//     }
+
+//     i.tim-icons {
+//       font-size: 16px;
+//     }
+//   }
+
+
+//   // Modal body
+//   // Where all modal content resides (sibling of .modal-header and .modal-footer)
+//   .modal-body {
+//     line-height: 1.9;
+
+//     p{
+//       color: $black;
+//     }
+//   }
+//   // Footer (for actions)
+//   .modal-footer {
+//     border-top: 0;
+//     -webkit-justify-content: space-between; /* Safari 6.1+ */
+//     justify-content: space-between;
+
+//     button {
+//       margin: 0;
+//       padding-left: 16px;
+//       padding-right: 16px;
+//       width: auto;
+
+//       &.pull-left {
+//         padding-left: 5px;
+//         padding-right: 5px;
+//         position: relative;
+//         left: -5px;
+//       }
+//     }
+
+//   }
+//   .modal-body + .modal-footer {
+//     padding-top: 0;
+//   }
+// }
+// .modal-backdrop {
+//   background: rgba(0,0,0,0.3);
+// }
+
+// .modal{
+
+//     &.modal-default{
+//         @include modal-colors($white, $black);
+//     }
+
+//     &.modal-primary{
+//         @include modal-colors($primary, $white);
+//     }
+
+//     &.modal-danger{
+//         @include modal-colors($danger, $white);
+//     }
+
+//     &.modal-warning{
+//         @include modal-colors($warning, $white);
+//     }
+
+//     &.modal-success{
+//         @include modal-colors($success, $white);
+//     }
+
+//     &.modal-info{
+//         @include modal-colors($info, $white);
+//     }
+
+//     .modal-header .close{
+//         color: $danger;
+//         text-shadow: none;
+
+//         &:hover,
+//         &:focus{
+//             opacity: 1;
+//         }
+//     }
+
+//     &.modal-black{
+//       .modal-content{
+//         background: linear-gradient(to bottom, $black 0%, $black-states 100%);
+//         color: rgba($white, 0.8);
+//         .modal-header{
+//           .modal-title, .title{
+//             color: rgba($white, 0.9);
+//           }
+//         }
+//         .modal-body{
+//           p{
+//             color: rgba($white, 0.8);
+//           }
+//         }
+//       }
+//       h1, h2, h3, h4, h5, h6, p{
+//         color: $white;
+//       }
+//     }
+// }
+
+// .modal-search{
+//   .modal-dialog{
+//     margin: 20px auto;
+//     max-width: 650px;
+//     input{
+//       border: none;
+//       font-size: 17px;
+//       font-weight: 100;
+//     }
+//     span{
+//       font-size: 35px;
+//       color: $search-gray;
+//     }
+//   }
+//   .modal-content{
+//     .modal-header{
+//       padding: 24px;
+//     }
+//   }
+
+//   .modal-header .close{
+//     color: $dark-background;
+//     top: 30px !important;
+//   }
+
+//   .modal-footer{
+//     border-top: 2px solid #f9f9f9;
+//     margin: 0px 25px 20px;
+//   }
+// }
+
+
+.hidden {
+    display: none;
+}
+  .open {
+    display: block!important;
+}
+.modal-open {
+  overflow: hidden;
+}
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  background-color: #00000063;
+  padding-top: 100px;
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  outline: 0;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 16.42857143px;
+}
+.modal-header .close {
+  margin-top: -2px;
+}
+.modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+.modal-body {
+  position: relative;
+  padding: 15px;
+}
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+}
+button.close {
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+  }
+}
+[role="button"] {
+  cursor: pointer;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.hidden {
+  display: none !important;
+}
+.affix {
+  position: fixed;
+}

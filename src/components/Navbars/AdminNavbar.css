@@ -1,0 +1,39 @@
+
+
+
+  .navbar {
+  padding: 10px 30px 10px 15px;
+  width: 100%;
+  z-index: 1050;
+ 
+  }
+   .navbar-wrapper {
+    display: flex;
+    align-items: center;
+  }
+    .navbar-absolute{
+    position: absolute;
+    z-index: 1050;
+  }
+
+
+  .navbar-transparent{
+    background: transparent !important;
+  }
+
+    .dropdown{
+            margin: 5px 0;
+          
+          }
+      
+
+      .dropdown.show .dropdown-menu{
+          display: block;
+
+      }
+
+      .dropdown .dropdown-menu{
+          display: none;
+         
+      }
+

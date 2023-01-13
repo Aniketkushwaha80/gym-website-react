@@ -1,0 +1,12 @@
+.card_imgBox{
+    height: 600px;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 600px) {
+.card_imgBox{
+    height: 300px;
+    
+}
+}
